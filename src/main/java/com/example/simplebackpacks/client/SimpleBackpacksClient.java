@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityRenderLayerRegistrationCallback;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.renderer.entity.player.AvatarRenderer;
-import org.lwjgl.glfw.GLFW;
 
 public class SimpleBackpacksClient implements ClientModInitializer {
     private static KeyMapping backpackKey;
@@ -20,8 +19,7 @@ public class SimpleBackpacksClient implements ClientModInitializer {
         // B: open the worn backpack. Shift + B: take it off.
         backpackKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.simplebackpacks.backpack",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_B,
+                InputConstants.KEY_B,
                 KeyMapping.Category.MISC));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {

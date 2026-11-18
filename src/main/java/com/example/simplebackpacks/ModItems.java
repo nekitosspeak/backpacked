@@ -1,6 +1,6 @@
 package com.example.simplebackpacks;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -26,10 +26,10 @@ public final class ModItems {
     }
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {
-            entries.accept(LEATHER_BACKPACK);
-            entries.accept(IRON_BACKPACK);
-            entries.accept(DIAMOND_BACKPACK);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
+            output.accept(LEATHER_BACKPACK);
+            output.accept(IRON_BACKPACK);
+            output.accept(DIAMOND_BACKPACK);
         });
     }
 }

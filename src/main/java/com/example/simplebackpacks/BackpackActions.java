@@ -67,7 +67,7 @@ public final class BackpackActions {
         if (player.getInventory().add(worn)) {
             player.removeAttached(ModAttachments.WORN);
         } else {
-            player.displayClientMessage(Component.translatable("message.simplebackpacks.inventory_full"), true);
+            player.sendSystemMessage(Component.translatable("message.simplebackpacks.inventory_full"));
         }
     }
 

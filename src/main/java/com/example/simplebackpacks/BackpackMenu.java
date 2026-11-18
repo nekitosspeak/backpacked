@@ -3,7 +3,7 @@ package com.example.simplebackpacks;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ChestMenu;
-import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
@@ -31,7 +31,7 @@ public class BackpackMenu extends ChestMenu {
     }
 
     @Override
-    public void clicked(int slotId, int button, ClickType clickType, Player player) {
+    public void clicked(int slotId, int button, ContainerInput clickType, Player player) {
         if (isForbidden(slotId, button, clickType, player)) {
             return;
         }
@@ -42,10 +42,10 @@ public class BackpackMenu extends ChestMenu {
         return slotId >= 0 && slotId < backpackSlots;
     }
 
-    private boolean isForbidden(int slotId, int button, ClickType clickType, Player player) {
+    private boolean isForbidden(int slotId, int button, ContainerInput clickType, Player player) {
         ItemStack open = backpack.getBackpackStack();
 
-        if (clickType == ClickType.SWAP) {
+        if (clickType == ContainerInput.SWAP) {
             Inventory inv = player.getInventory();
             ItemStack swapped = (button >= 0 && button < inv.getContainerSize()) ? inv.getItem(button) : ItemStack.EMPTY;
             if (swapped == open) {
@@ -66,7 +66,7 @@ public class BackpackMenu extends ChestMenu {
                 if (getCarried().getItem() instanceof BackpackItem) {
                     return true; // no backpacks inside backpacks
                 }
-            } else if (clickType == ClickType.QUICK_MOVE && clicked.getItem() instanceof BackpackItem) {
+            } else if (clickType == ContainerInput.QUICK_MOVE && clicked.getItem() instanceof BackpackItem) {
                 return true;
             }
         }
