@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": ["LIL", "ICI", "LIL"],
+  "key": {
+    "L": "minecraft:leather",
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:chest"
+  },
+  "result": { "id": "simplebackpacks:iron_backpack", "count": 1 }
+}

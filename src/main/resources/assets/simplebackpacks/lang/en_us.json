@@ -1,0 +1,7 @@
+{
+  "item.simplebackpacks.leather_backpack": "Leather Backpack",
+  "item.simplebackpacks.iron_backpack": "Iron Backpack",
+  "item.simplebackpacks.diamond_backpack": "Diamond Backpack",
+  "key.simplebackpacks.backpack": "Open backpack (Shift: take off)",
+  "message.simplebackpacks.inventory_full": "Inventory is full"
+}

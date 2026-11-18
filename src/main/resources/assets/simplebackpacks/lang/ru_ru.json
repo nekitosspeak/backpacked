@@ -1,0 +1,7 @@
+{
+  "item.simplebackpacks.leather_backpack": "Кожаный рюкзак",
+  "item.simplebackpacks.iron_backpack": "Железный рюкзак",
+  "item.simplebackpacks.diamond_backpack": "Алмазный рюкзак",
+  "key.simplebackpacks.backpack": "Открыть рюкзак (Shift: снять)",
+  "message.simplebackpacks.inventory_full": "Инвентарь полон"
+}
